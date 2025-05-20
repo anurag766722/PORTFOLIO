@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Personal Portfolio - ANURAG</title>
+<style>
+  :root {
+    --primary-color: #0077b6;
+    --secondary-color: #0096c7;
+    --accent-color: #90e0ef;
+    --background-color: #caf0f8;
+    --text-color: #03045e;
+    --muted-color: #555;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+  }
+  nav {
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 6px 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 6px;
+  }
+  nav a:hover,
+  nav a.active {
+    background: var(--accent-color);
+    color: var(--primary-color);
+  }
+  main {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+  section + section {
+    margin-top: 50px;
+  }
+  h2 {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  p {
+    max-width: 700px;
+  }
+  /* About Me Section */
+  #about {
+    font-size: 1.2rem;
+  }
+  /* Skills Section */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .skill-item {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    user-select: none;
+  }
+  /* Experience Section */
+  .job {
+    margin-bottom: 25px;
+  }
+  .job h3 {
+    margin: 0;
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+  }
+  .job .company {
+    font-style: italic;
+    color: var(--muted-color);
+    margin-bottom: 6px;
+  }
+  .job .duration {
+    font-size: 0.9rem;
+    color: var(--muted-color);
+    margin-bottom: 12px;
+  }
+  /* Projects Section */
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+  }
+  .project {
+    background: var(--accent-color);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .project:hover {
+    transform: translateY(-5px);
+  }
+  .project h4 {
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+  }
+  .project p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+  }
+  /* Contact Section */
+  #contact {
+    text-align: center;
+  }
+  #contact a.button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transition: background 0.3s ease;
+  }
+  #contact a.button:hover {
+    background: var(--secondary-color);
+  }
+  /* Smooth scroll polyfill */
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    main {
+      padding: 20px;
+      margin: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Your Name</h1>
+  <p>Front-End Developer & Web Enthusiast</p>
+</header>
+
+<nav role="navigation" aria-label="Primary Navigation">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section id="about" tabindex="0" aria-label="About Me Section">
+    <h2>About Me</h2>
+    <p>Hello! I am a passionate front-end developer with a love for building beautiful and functional web experiences. I enjoy working with HTML, CSS, and JavaScript to create interactive user interfaces that delight users. When I'm not coding, I like to explore new technologies and improve my skills continuously.</p>
+  </section>
+
+  <section id="skills" tabindex="0" aria-label="Skills Section">
+    <h2>Skills</h2>
+    <div class="skills-list" role="list">
+      <span class="skill-item" role="listitem">HTML5</span>
+      <span class="skill-item" role="listitem">CSS3</span>
+      <span class="skill-item" role="listitem">JavaScript</span>
+      <span class="skill-item" role="listitem">React</span>
+      <span class="skill-item" role="listitem">Responsive Design</span>
+      <span class="skill-item" role="listitem">Git & GitHub</span>
+      <span class="skill-item" role="listitem">Webpack</span>
+      <span class="skill-item" role="listitem">API Integration</span>
+    </div>
+  </section>
+
+  <section id="experience" tabindex="0" aria-label="Experience Section">
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Front-End Developer</h3>
+      <div class="company">Awesome Company</div>
+      <div class="duration">Jan 2021 - Present</div>
+      <p>Work on creating and optimizing responsive, user-friendly web applications and interactive UI components. Collaborate with back-end engineers and designers to deliver seamless experiences.</p>
+    </div>
+    <div class="job">
+      <h3>Web Developer Intern</h3>
+      <div class="company">Startup Studio</div>
+      <div class="duration">Jun 2020 - Dec 2020</div>
+      <p>Assisted in website development and debugging. Learned agile development and version control best practices in a fast-paced environment.</p>
+    </div>
+  </section>
+
+  <section id="projects" tabindex="0" aria-label="Projects Section">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <div class="project" tabindex="0" aria-label="Project: Portfolio Website">
+        <h4>Portfolio Website</h4>
+        <p>A personal portfolio website to showcase my skills, projects, and resume. Built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project" tabindex="0" aria-label="Project: Calculator App">
+        <h4>Calculator App</h4>
+        <p>A simple calculator with basic arithmetic operations created as a learning project.</p>
+      </div>
+      <div class="project" tabindex="0" aria-label="Project: Image Gallery">
+        <h4>Image Gallery</h4>
+        <p>A responsive image gallery with interactive thumbnails and navigation buttons.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" tabindex="0" aria-label="Contact Section">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch, feel free to reach out via email or check my resume below.</p>
+    <a href="resume.pdf" class="button" download aria-label="Download Resume">Download Resume</a>
+  </section>
+</main>
+
+<script>
+  // Highlight active nav based on scroll position
+  const sections = document.querySelectorAll('main section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  function onScroll() {
+    let scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+    sections.forEach((section, idx) => {
+      if (
+        scrollPos >= section.offsetTop - 60 &&
+        scrollPos < section.offsetTop + section.offsetHeight - 60
+      ) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        navLinks[idx].classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+</script>
+
+</body>
+</html>
+
